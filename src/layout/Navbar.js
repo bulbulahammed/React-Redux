@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 import { IoIosListBox } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -22,11 +22,11 @@ const Navbar = () => {
             <IoIosListBox className='text-white' />
           </Link>
         </li>
-        <li title='cart' className='bg-indigo-500 p-2 rounded-full'>
           <Link to='/cart'>
-            <BsFillCartFill className='text-white ' />
+            <li title='cart' className='bg-indigo-500 p-2 rounded-full'>
+                <BsFillCartFill className='text-white ' />
+            </li>
           </Link>
-        </li>
       </ul>
     </nav>
   );

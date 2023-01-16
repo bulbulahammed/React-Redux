@@ -1,7 +1,8 @@
 import React from "react";
 import { BiListPlus } from "react-icons/bi";
+import { RiDeleteBin2Line } from "react-icons/ri";
 import { useDispatch } from "react-redux";
-import { addToCart } from './../redux/actionCreators/productAction';
+import { addToCart, RemoveFromCart } from './../redux/actionCreators/productAction';
 
 const ProductCard = ({ product }) => {
 
@@ -29,6 +30,11 @@ const ProductCard = ({ product }) => {
           onClick={()=>dispatch(addToCart(product))} 
           className='bg-indigo-500 rounded-full py-1 px-2 flex-1 text-white text-bold'>
           Add to cart
+        </button>
+        <button
+          onClick={()=>dispatch(RemoveFromCart(product))} 
+          className='bg-indigo-500 rounded-full py-1 px-2 flex-1 text-white text-bold'>
+          <RiDeleteBin2Line/>
         </button>
         <button
           title='Add to wishlist'
