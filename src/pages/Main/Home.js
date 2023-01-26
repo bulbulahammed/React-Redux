@@ -7,9 +7,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
   const filters = useSelector((state) => state.filter.filters);
-  console.log(filters);
   const {brands,stock} = filters;
-  console.log(brands);
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
